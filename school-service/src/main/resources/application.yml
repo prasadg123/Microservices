@@ -1,0 +1,31 @@
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka
+    instance-info-replication-interval-seconds: 5 
+    
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+    prefer-ip-address: true
+    
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+        
+
+        
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8033/auth/user        
+          
+  file: C:\Users\prasad.gorrepati\Documents\workspace-sts-3.9.5.RELEASE\LogFiles\Schoolservice.log       
+    
+ 
