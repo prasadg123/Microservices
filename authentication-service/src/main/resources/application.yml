@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: authentication-service
+    
+server:
+  port: 8033
+  
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'      
+            
